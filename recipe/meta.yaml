@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url : https://gitlab.com/eetun-tiimi/EODIE/-/archive/v{{ version }}/EODIE-v{{ version }}.tar.gz
+  url : https://gitlab.com/fgi_nls/kauko/chade/EODIE/-/archive/v{{ version }}/EODIE-v{{ version }}.tar.gz 
   sha256: 403f1cf65002c67f35948adef32940437215547de5f60bd6d4efd6d58bc4c41d
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -36,14 +36,14 @@ test:
     - eodie_process.py --help
 
 about:
-  home: https://gitlab.com/eetun-tiimi/EODIE
+  home: https://gitlab.com/fgi_nls/kauko/chade/EODIE
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: The Earth Observation Data Information Extractor is a toolkit to extract object based timeseries information from Earth Observation data.
   description: The goal of EODIE is to ease the extraction of time series information at object level. Today, vast amounts of Earth Observation data are available to the users via for example earth explorer or scihub. Often, not the whole images are needed for exploitation, but only the timeseries of a certain feature on object level. Objects may be polygons depicting agricultural field parcels, forest plots, or areas of a certain land cover type.
   doc_url: https://eodie.readthedocs.io/en/latest/
-  dev_url: https://gitlab.com/eetun-tiimi/EODIE
+  dev_url: https://gitlab.com/fgi_nls/kauko/chade/EODIE
 
 extra:
   recipe-maintainers:
