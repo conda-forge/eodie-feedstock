@@ -1,17 +1,17 @@
 {% set name = "EODIE" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url : https://gitlab.com/fgi_nls/public/EODIE/-/archive/v{{ version }}/EODIE-v{{ version }}.tar.gz 
-  sha256: 403f1cf65002c67f35948adef32940437215547de5f60bd6d4efd6d58bc4c41d
+  url: https://gitlab.com/fgi_nls/public/EODIE/-/archive/v{{ version }}/EODIE-v{{ version }}.tar.gz
+  sha256: a4f7e49820efdaea11fa68b6a95eeed828ce559a9a299956458a0a21b4e3a5ac
 
 build:
   skip: true  # [win]
-  number: 4
+  number: 0
 
 requirements:
   host:
@@ -29,8 +29,8 @@ requirements:
     - matplotlib-base
 
 test:
-  imports: 
-    - eodie   
+  imports:
+    - eodie
   commands:
     - python -c 'from osgeo import gdal'
     - eodie_process.py --help
@@ -41,7 +41,8 @@ about:
   license_family: GPL
   license_file: LICENSE
   summary: The Earth Observation Data Information Extractor is a toolkit to extract object based timeseries information from Earth Observation data.
-  description: The goal of EODIE is to ease the extraction of time series information at object level. Today, vast amounts of Earth Observation data are available to the users via for example earth explorer or scihub. Often, not the whole images are needed for exploitation, but only the timeseries of a certain feature on object level. Objects may be polygons depicting agricultural field parcels, forest plots, or areas of a certain land cover type.
+  description: The goal of EODIE is to ease the extraction of time series information at object level. Today, vast amounts of Earth Observation data are available to the users via for example earth explorer or scihub. Often, not the whole images are needed for exploitation, but only the timeseries of a certain feature on
+    object level. Objects may be polygons depicting agricultural field parcels, forest plots, or areas of a certain land cover type.
   doc_url: https://eodie.readthedocs.io/en/latest/
   dev_url: https://gitlab.com/fgi_nls/public/EODIE
 
